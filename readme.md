@@ -48,7 +48,7 @@ Example `.env` content:
 
 ```
 BIND_IP=127.0.0.1
-LISTEN_PORT=8000
+LISTEN_PORT=8080
 PSQL_HOST=127.0.0.1
 PSQL_PORT=5432
 PSQL_NAME=sub_service
@@ -82,7 +82,7 @@ Example `.env` content:
 
 ```
 BIND_IP=127.0.0.1
-LISTEN_PORT=8000
+LISTEN_PORT=8080
 PSQL_HOST=psql-db
 PSQL_PORT=25432
 PSQL_NAME=sub_service
@@ -102,4 +102,4 @@ make docker-compose-up-silent
 
 ## Swagger Docs
 
-Auto-generated API documentation is available at `http://127.0.0.1:8000/swagger/index.html`. These documents are generated dynamically using the Swag package during compilation.
+Auto-generated API documentation is available at `http://127.0.0.1:8080/swagger/index.html`. These documents are generated dynamically using the Swag package during compilation.

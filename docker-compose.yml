@@ -10,7 +10,7 @@ services:
       postgres:
         condition: service_healthy
     ports: 
-      - "8000:8000"
+      - "8080:8080"
     
   postgres:
     image: postgres:16-alpine
@@ -27,7 +27,7 @@ services:
     volumes:
       - ./data:/var/lib/postgresql/data
     ports:
-      - "25432:5432"
+      - "25432:${PSQL_PORT}"
 
   migration:
     container_name: migrator
