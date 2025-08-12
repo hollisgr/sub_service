@@ -12,7 +12,6 @@ This project demonstrates a typical CRUDL implementation with:
 - **Logrus**: Structured logger with flexible output formats.
 - **Goose**: Database migrations.
 
-
 ## Requirements
 
 - **Go**: Version 1.20+.
@@ -20,8 +19,7 @@ This project demonstrates a typical CRUDL implementation with:
 - **Goose**: Version 3.24+.
 - **Docker** (optional): For easier setup with Docker images.
 
-
-## Getting Started
+## Directory structure
 
 - **cmd**: Contains the main application entry point.
 - **build**: Contains the docker images.
@@ -33,9 +31,11 @@ This project demonstrates a typical CRUDL implementation with:
 - **migrations**: This directory stores database migrations.
 - **pkg**: Helper utilities like database connections and logging.
 
+## Getting Started
+
 ### 1. Cloning the Repository
 
-```bash
+```
 git clone https://github.com/hollisgr/sub_service.git
 cd sub_service
 ```
@@ -46,7 +46,7 @@ Update the config variables in `.env` file.
 
 Example `.env` content:
 
-```bash
+```
 BIND_IP=127.0.0.1
 LISTEN_PORT=8000
 PSQL_HOST=127.0.0.1
@@ -59,18 +59,18 @@ PSQL_PASSWORD=password
 ### 3. Running the Application
 
 database migrations:
-```bash
+```
 goose -dir migrations postgres "host=${PSQL_HOST} port=${PSQL_PORT} dbname=${PSQL_NAME} user=${PSQL_USER} password=${PSQL_PASSWORD} sslmode=disable" up
 ```
 
 run app:
-```bash
+```
 go build -o sub_service cmd/app/main.go
 ./sub_service
 ```
 
 or run with makefile
-```bash
+```
 make build && make run
 ```
 
@@ -80,7 +80,7 @@ Update the config variables in `.env` file.
 
 Example `.env` content:
 
-```bash
+```
 BIND_IP=127.0.0.1
 LISTEN_PORT=8000
 PSQL_HOST=psql-db
@@ -90,16 +90,16 @@ PSQL_USER=postgres
 PSQL_PASSWORD=password
 ```
 
-```bash
+```
 make docker-compose-up
 ```
 
 Or silent mode:
 
-```bash
+```
 make docker-compose-up-silent
 ```
 
 ## Swagger Docs
 
-Auto-generated API documentation is available at `http://localhost:8080/swagger/index.html`. These documents are generated dynamically using the Swag package during compilation.
+Auto-generated API documentation is available at `http://127.0.0.1:8000/swagger/index.html`. These documents are generated dynamically using the Swag package during compilation.
