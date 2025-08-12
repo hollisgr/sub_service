@@ -1,6 +1,6 @@
 # Simple CRUDL app
 
-Simple CRUD application built with Golang using Gin framework, PGX library for PostgreSQL connectivity, Swag for generating API documentation, and Logrus for structured logging.
+Simple CRUDL application (subscriptions) built with Golang using Gin framework, PGX library for PostgreSQL connectivity, Swag for generating API documentation, and Logrus for structured logging.
 
 ## Overview
 
@@ -25,6 +25,7 @@ This project demonstrates a typical CRUDL implementation with:
 - **build**: Contains the docker images.
 - **docs**: Auto-generated Swagger documentation using Swag.
 - **internal/config**: Holds configurations including database settings.
+- **internal/db**: Database functions.
 - **internal/models**: Defines the entity models.
 - **internal/handler**: Handlers for managing API endpoints.
 - **internal/subscription**: Service for managing subscription entity.
