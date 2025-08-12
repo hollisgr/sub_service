@@ -1,5 +1,5 @@
 SRC := cmd/app/main.go
-EXEC := main
+EXEC := sub_service
 
 LOGRUS := github.com/sirupsen/logrus github.com/sirupsen/logrus@v1.9.3
 CLEANENV := github.com/ilyakaznacheev/cleanenv

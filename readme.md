@@ -40,9 +40,9 @@ git clone https://github.com/hollisgr/sub_service.git
 cd sub_service
 ```
 
-### 2. Setting Up the Environment
+### 2. Setting Up the Configuration
 
-Update the config variables in `.env` file.
+Write the config variables in `.env` file.
 
 Example `.env` content:
 
@@ -81,7 +81,7 @@ Update the config variables in `.env` file.
 Example `.env` content:
 
 ```
-BIND_IP=127.0.0.1
+BIND_IP=0.0.0.0
 LISTEN_PORT=8080
 PSQL_HOST=psql-db
 PSQL_PORT=25432
